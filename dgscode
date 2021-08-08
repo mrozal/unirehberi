@@ -1,0 +1,39 @@
+jQuery(document).ready(function($) {
+function dgshesapla() {
+function limit(d, y, limit) {
+if (limit < Number(d.val())) {
+d.val(limit);
+y.val(0);
+}
+if (limit < (Number(d.val()) + Number(y.val()))) {
+y.val(0);
+}
+if (d.val() == undefined) {
+d.val(0);
+}
+if (y.val() == undefined) {
+y.val(0);
+}
+}
+var diploma = $('input[name="diploma"]');
+if (80 < Number(diploma.val())) {
+diploma.val(80);
+}
+if ($('input[name="kirikOBP"]:checked').val() !== undefined) {
+var diplomapuan = (Number(diploma.val()) * 0.6) / 2;
+} else {
+var diplomapuan = (Number(diploma.val()) * 0.6);
+}
+var katsayi = $("#katsayi").val();
+var dgs_say_d = $('input[name="dgs_say_d"]');
+var dgs_say_y = $('input[name="dgs_say_y"]');
+var dgs_say_n = $('input[name="dgs_say_n"]');
+var dgs_soz_d = $('input[name="dgs_soz_d"]');
+var dgs_soz_y = $('input[name="dgs_soz_y"]');
+var dgs_soz_n = $('input[name="dgs_soz_n"]');
+var dgs_say_ham = $('input[name="dgs_say_ham"]');
+var dgs_soz_ham = $('input[name="dgs_soz_ham"]');
+var dgs_ea_ham = $('input[name="dgs_ea_ham"]');
+var dgs_say_yer = $('input[name="dgs_say_yer"]');
+var dgs_soz_yer = $('input[name="dgs_soz_yer"]');
+var dgs_ea_yer = $('input[name="dgs_ea_yer"]');
